@@ -1,10 +1,18 @@
 # clj-typesafe
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library wrapping Typesafe Config.
 
 ## Usage
 
-FIXME
+Usage is very similar to how you would use typesafe in Java:
+```clojure
+(require '[clj-typesafe.config-factory :as cf]
+	 '[clj-typesafe.config :as c])
+(def config (cf/load))
+(c/get-string config "some.string")
+(c/get-int config "some.int")
+(c/get-double config "some.float")
+```
 
 ## License
 
